@@ -1,0 +1,25 @@
+﻿<Window x:Class="GameSessionTimer.AddGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameSessionTimer"
+        mc:Ignorable="d"
+        Title="Добавление игры" Height="250" Width="300" ResizeMode="NoResize">
+    <StackPanel Margin="20">
+        <StackPanel.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="0 0 0 20"/>
+            </Style>
+        </StackPanel.Resources>
+        
+        <Label>Название игры</Label>
+        <TextBox x:Name="nameBox" TextChanged="nameBox_TextChanged"/>
+
+        <Label>Путь к игре</Label>
+        <Button Margin="0 0 0 30" Click="Button_Click" x:Name="chooseFileNmaeButton">Указать путь</Button>
+
+        <Label x:Name="messageLabel"></Label>
+        <Button x:Name="addBtn" IsEnabled="False" Click="addBtn_Click">Добавить</Button>
+    </StackPanel>
+</Window>
