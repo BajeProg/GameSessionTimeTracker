@@ -8,12 +8,7 @@ namespace GameSessionTimer
     {
         public delegate void AddGameHandler(Game game);
         public static event AddGameHandler onGameAdded;
-        public static List<Game> GameList { get; private set; }
-
-        public Games()
-        {
-            GameList = new List<Game>();
-        }
+        public static List<Game> GameList { get; private set; } = new List<Game>();
 
         public static void Load()
         {
